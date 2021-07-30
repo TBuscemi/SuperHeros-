@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4xo37d=q89^91jm!a4!t9jvfar03va$w%rbfn!i1=qdciloxiy'
+SECRET_KEY = 'django-insecure-ipq#9e*@15k6)avzl$wsn!-yx+xkf06#w_3oa5idtejl=zbn9k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'watchtower.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE':'mysql.connector.django',
         'NAME': 'heroes',
         'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD':'password',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
         'OPTIONS':{
             'autocommit':True
         }
