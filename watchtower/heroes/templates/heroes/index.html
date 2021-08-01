@@ -7,6 +7,16 @@
     <title>heroes</title>
 </head>
 <body>
-    <h1>test</h1>
+<h1>List of all Heroes!!</h1>
+<ul>
+    {% for heroes in all_heroes %}
+    <li><h2> {{heroes.super_hero_name}}</li></h2>
+    {% endfor %}
+<ul> 
+{% comment %} <ul>
+    {% for heroes in all_heroes %}
+    <li><h2>{{heroes.super_hero_name}} {% if heroes.primary_power == 'Strength' %} - LIFTS CAR! {% endif %}</h2></li>
+    {% endfor %}
+</ul> {% endcomment %}
 </body>
 </html>
