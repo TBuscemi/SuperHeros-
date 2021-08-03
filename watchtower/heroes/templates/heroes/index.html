@@ -7,16 +7,21 @@
     <title>heroes</title>
 </head>
 <body>
-<h1>List of all Heroes!!</h1>
-<ul>
-    {% for heroes in all_heroes %}
-    <li><h2> {{heroes.super_hero_name}}</li></h2>
-    {% endfor %}
-<ul> 
-{% comment %} <ul>
-    {% for heroes in all_heroes %}
-    <li><h2>{{heroes.super_hero_name}} {% if heroes.primary_power == 'Strength' %} - LIFTS CAR! {% endif %}</h2></li>
-    {% endfor %}
-</ul> {% endcomment %}
+    <h1>List of all Heroes!!</h1>
+    <ul>   
+        {% for heroes in all_heroes %}
+        <li>
+            <h2>{{heroes.super_hero_name}}</h2>
+            <a href="{% url 'heroes:detail' heroes.id %}">Click for details</a>
+            <a href="{% url 'heroes:edit' heroes.id %}">Edit A Hero!</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <ul>   
+        <h2> Other Things You Can Do!</h2>
+        <li><a href="{% url 'heroes:create_hero' %}">Create New Hero!</a></li>
+    </ul>
+    {% load static %}
+    <img src="{% static 'heroes/lobo.jpg' %}"
 </body>
 </html>
