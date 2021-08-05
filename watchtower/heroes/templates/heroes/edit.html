@@ -7,8 +7,7 @@
     <title>edit</title>
 </head>
 <body> 
-    <form action="{% url 'heroes:edit' edit_hero.id %}" method="post">     
-        {% csrf_token %} <br />
+    <form action="{% url 'heroes:edit' edit_hero.id %}" method="post"> <br />
         Super Hero Name:  
         <input 
         type="text" 
@@ -36,5 +35,6 @@
             id="catchphrase" 
             value="{{edit_hero.catchphrase}}"/><br />
         <input type="submit" value="Edit Hero"/>       
-</body>
+
+/body>
 </html>
